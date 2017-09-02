@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="t7yang">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="[O2FP] Firefox 字型調整">
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="t7&#39;Space">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>[O2FP] Firefox 字型調整 - t7&#39;Space</title>
+
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="/images/logo.png" alt="t7'Space" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  about
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/atom.xml">
+                
+                  rss
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            [O2FP] Firefox 字型調整
+            
+          </h1>
+          <p class="posted-on">
+          2013-08-02
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/Firefox/" rel="tag">
+                  Firefox
+                </a>
+              
+                <a href="/tags/Firefox Font Settings/" rel="tag">
+                  Firefox Font Settings
+                </a>
+              
+                <a href="/tags/O2FP/" rel="tag">
+                  O2FP
+                </a>
+              
+                <a href="/tags/Firefox Settings/" rel="tag">
+                  Firefox Settings
+                </a>
+              
+                <a href="/tags/UserStyle/" rel="tag">
+                  UserStyle
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <p>字型設定對 Opera 來說非常容易，簡單的一行 CSS 就可以搞定，但是到了 Firefox 就沒那麼簡單了。因為開發者在設計上的缺失，使得我們必須透過內部設定和較複雜 CSS 才能夠克服字型設定的問題。<br><a name="more"></a></p>
+<p>先決條件：</p>
+<ul>
+<li><a href="https://addons.mozilla.org/firefox/addon/stylish" rel="external nofollow noopener noreferrer" target="_blank">Stylish</a></li>
+<li>微軟正黑體或其他你喜歡的字型（下文會以正黑體為例）<br>Stylish 是因為我們需要使用自訂 CSS 的方式來控制網頁使用的字型，原則上把 CSS 程式碼貼在 userChome.css 內也是可行的，只是有 Stylish 的管理會更加方便。字型的部分，我所提供的 MSJhengHei Style 使用的是微軟正黑體，如果你的系統沒有正黑體或你有自己偏好的字型，也可以字型新增在 local(“Microsoft JhengHei”) 前面。</li>
+</ul>
+<h9>內部字型設定</h9>
+
+<ol>
+<li>點選進入瀏覽器的「選項」<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont01.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont01.png" alt=""></a></div>2.  切換分頁到「內容」，點選字型與顏色的「進階」按鈕。<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont02.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont02.png" alt=""></a></div>3.  如圖所示把字型都改為「微軟正黑體」（等款字型不改沒關係）。<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont03.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont03.png" alt=""></a></div>4.  接著切換到「簡體中文」，然後依序把字型都改為正黑體。<br>完成設定後，你可以開啟網頁來看看。基本上多數的台灣網站都會自動使用剛剛設定的正黑體來顯示，但是一些像報社的網站仍會以細明體來顯示。可以再試試看對岸的網站，幾乎全都失敗，網站完全不會以正黑體來顯示。</li>
+</ol>
+<blockquote>
+<h1 id="t7-補充："><a href="#t7-補充：" class="headerlink" title="t7 補充："></a>t7 補充：</h1><p>當然你可以回到字型選項中把「優先使用網站指定的字型」選像取消勾選。但這樣會導致瀏覽器完全忽視網站的字型設定，進而使得一些網站指定使用圖示字型和等寬字型的設定被忽略，造成圖示字型變成亂碼和文字游標錯位的問題。這就是 Firefox 開發者失敗的地方，基本我把這樣的情況歸類為 Bug，但我想他們應該不會承認。</p>
+<div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont05.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont05.png" alt=""></a></div>
+
+<p>套用 UseStyle 指定中文應該使用的字型<br>MSJhengHei Style 是由我和若干位 PTT 的板友一起努力完成的。透過這個 UserStyle 我們就可以正確地指定網站的中文應該要使用哪個中文字型來顯示。如果你對這個 UserStyle 有任何改進的建議或指教也非常歡迎聯絡我。<br>如何取得 MSJhengHei Style：<br>直接到<a href="http://pastebin.com/cTkZTBD1" rel="external nofollow noopener noreferrer" target="_blank">發布網站</a>下載或透過「<a href="https://docs.google.com/spreadsheet/ccc?key=0AkY2yayFmcCqdFprSVVlZjkzX3FjOVN1aWxaa2FtcUE#gid=9" rel="external nofollow noopener noreferrer" target="_blank">O2FP</a>」的 UserScript / Style 工作表連線到發布網站</p>
+</blockquote>
+<ol>
+<li>確保你已經安裝好 Stylish。</li>
+<li>全選並複製「<a href="http://pastebin.com/cTkZTBD1" rel="external nofollow noopener noreferrer" target="_blank">MSJhengHei Style vx.x (For Firefox)</a>」的程式碼。<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont06.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont06.png" alt=""></a></div>3.  在左上角開啟「附加元件」。<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont07.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont07.png" alt=""></a></div>4.  切換到 Stylish 頁面並點選〔編寫新樣式〕<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont08.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont08.png" alt=""></a></div>5.  把程式碼貼在內容區，輸入名稱後按下儲存即可。<blockquote>
+<p>text-shadow 陰影效果：<br>如果沒有安裝系統美化工具 Mactype 或其他類似的替代品又想要體驗文字陰影效果的話，你可以回到編輯器中把 body {……} 前後的註解符號 /<em> </em>/ 刪除並儲存即可。</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont11.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont11.png" alt=""></a></div><br>另外，某些顯示卡在啟用瀏覽器的硬體加速後，就算安裝了 Mactype 等工具也無法有效成像陰影效果的文字，這時就一定借助 text-shadow 的效果了。</p>
+</blockquote>
+</li>
+</ol>
+<p>最後我們來看看一個調整前後的比較圖。從下圖你可以很清楚地看到預設的字型設定和經過調整後的字型設定，何者更佳，相信你心中應該有答案了。</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont10.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/TweakFirefoxFont10.png" alt=""></a></div></p>
+<blockquote>
+<p>如果你發現某些網站無法正確使用指定字型來顯示中文的話，可以把網址傳送給我，我會進行更新。</p>
+</blockquote>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-O2FP-Firefox-字型調整';
+          this.page.title = '[O2FP] Firefox 字型調整';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/552/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/28832/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">About</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li>t7yang</li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/t7yang" class="icon icon-github" target="_blank" rel="external nofollow noopener noreferrer">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>t7'Space &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank" rel="external nofollow noopener noreferrer">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 't7space';
+
+  
+  var disqus_url = 'https://t7yang.github.io/64400/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+</body>
+
+</html>

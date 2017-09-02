@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="t7yang">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="Firefox 字型設定大全（成像設定、字型選擇、使用者樣式）">
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="t7&#39;Space">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>Firefox 字型設定大全（成像設定、字型選擇、使用者樣式） - t7&#39;Space</title>
+
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="/images/logo.png" alt="t7'Space" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  about
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/atom.xml">
+                
+                  rss
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            Firefox 字型設定大全（成像設定、字型選擇、使用者樣式）
+            
+          </h1>
+          <p class="posted-on">
+          2016-04-03
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/Firefox/" rel="tag">
+                  Firefox
+                </a>
+              
+                <a href="/tags/Firefox Font Settings/" rel="tag">
+                  Firefox Font Settings
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <p>除了利用 Mactype 或 GDI++ 等成像軟體來輔助字型的成像外，Firefox 其實也內建了字型成像的選項供使用者調整。這些選項預設是停用的，知道的人可能相對較少，所以常常就必須面臨是否要放棄硬體加速來換 Mactype 成像的困境，但其實可以兩全其美。<br><a name="more"></a></p>
+<p><table align="left" border="1"><thead><tr>       <th scope="col">設定項目</th>       <th scope="col">選項</th>       <th scope="col">說明及建議</th>     </tr></thead>   <tbody><tr>       <td style="max-width: 200px;">gfx.font_rendering.directwrite.enabled</td>       <td><br>TRUE／FALSE</td>       <td><br>啟用字型成像，必須啟用後底下的設定才有效果。</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.pixel_structure</td>       <td><br>0 = Flat<br>1 = RGB<br>2 = BGR</td>       <td>像素結構，液晶螢幕使用1（RGB）</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.gamma</td>       <td><br>1000～2200</td>       <td><br>Gamma 校正值，標準：Windows 2200、MAC 1800。</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.cleartype_level</td>       <td><br>0～100</td>       <td><br><a href="http://zh.wikipedia.org/wiki/ClearType" rel="external nofollow noopener noreferrer" target="_blank">ClearType</a> 的強度，數值越高字越平滑，但也可能越模糊。一般建議落在 50～80 之間即可。</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.enhanced_contrast</td>       <td><br>0～1000</td>       <td><br>對比度，數值越高越銳利，字也會越粗。一般建議落在 200～500 之間即可。</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.rendering_mode</td>       <td><br>0 = Default<br>1 = Aliased<br>2 = GDI Classic<br>3 = GDI Natural Widths<br>4 = Natural<br>5 = Natural Symmetric</td>       <td><br>成像模式，可以根據自己的系統反覆嘗試何種模式最舒服，不須重新啟動瀏覽器即可以看到效果。<br>其中「Default」、「Natural」、「Natural Symmetric」是不錯的選擇。某些電腦在選擇「Aliased」後介面文字可能會完全看不到。Default 模式小字用 Natural，大字用 Natural Symmetric。</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.force_gdi_classic_for_families</td>       <td>字型名稱</td>       <td>這個清單的字型會強制使用傳統GDI的方式成像，某些較適合使用GDI進行成像的字型可以加入這個清單</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype_params.force_gdi_classic_max_size</td>       <td>數字</td>       <td>強制使用傳統GDI方式成像的最大大小，應該跟上一個選項是連動的</td>     </tr><tr>       <td style="max-width: 200px;">gfx.use_text_smoothing_setting</td>       <td><br>TRUE／FALSE</td>       <td><br>開啟平滑設定（用於 Mac 系統）</td>     </tr><tr>       <td style="max-width: 200px;">gfx.font_rendering.cleartype.always_use_for_content</td>       <td>TRUE / FALSE</td>       <td>對所有內容啟用ClearType成像</td>     </tr><tr>       <td style="max-width: 200px;">browser.display.auto_quality_min_font_size</td>       <td>數字</td>       <td>決定在哪個字級以上使用高品質成像（<a href="http://kb.mozillazine.org/Browser.display.auto_quality_min_font_size" rel="external nofollow noopener noreferrer" target="_blank">註1</a>、<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering" rel="external nofollow noopener noreferrer" target="_blank">註2</a>）</td>     </tr></tbody> </table><br>資料來源：<br><a href="http://blog.timshan.idv.tw/2013/06/howto.html" rel="external nofollow noopener noreferrer" target="_blank">http://blog.timshan.idv.tw/2013/06/howto.html</a><br><a href="https://addons.mozilla.org/zh-tw/firefox/addon/anti-aliasing-tuner/" rel="external nofollow noopener noreferrer" target="_blank">https://addons.mozilla.org/zh-tw/firefox/addon/anti-aliasing-tuner/</a><br><a href="http://mikawaffle.blogspot.tw/2012/02/firefox.html" rel="external nofollow noopener noreferrer" target="_blank">http://mikawaffle.blogspot.tw/2012/02/firefox.html</a><br>並加入部分個人的建議<br>測試 Firefox 版本：28 beta </p>
+<p>這裡還需要提醒的是，有時會發現怎麼調都不是很好看，這時要警覺可能是跟螢幕的設定（對比度佔很大原因），適時的調整螢幕的設定或許會發現問題原來出在這裡。</p>
+<p>除了自己開啟 about:config 來敲敲打打之外，如果習慣使用圖形介面來操作的話，也可以安裝<a href="https://addons.mozilla.org/firefox/addon/anti-aliasing-tuner/" rel="external nofollow noopener noreferrer" target="_blank">Anti Aliasing Tuner</a>。</p>
+<h9>字型的選擇</h9><br>除了成像的參數之外，其實中文世界中最大的閱讀愉悅度的障礙其實來自於字型本身。因為中文世界中非常缺乏高品質的字型（就算是付費的字型）。在作業系統上：<br><br>※各常見作業系統簡單介紹<br>MAC：<br>有先天的「蘋果基因」優勢，很大程度的克服了瀏覽器中文字難看的問題。除了行之有年「儷黑PRO」和「黑體 TC」外，也有一些使用者會偷渡使用品質更好的日文冬青黑體。<br><br>Windows：<br>直到微軟在Windows Vista內建「微軟正黑體」後，微軟作業系統的使用才有一款比較好看的無襯線黑體字型（最重要的是微軟正黑體符合國字標準字體的規範。在此之前，不少使用者偏好使用日文字型。<br><br>Linux：<br>一般來說文泉驛黑體是Linux 使用者的首選，但其實這款字型是修改自 Android 的Unicode字型，並根據對岸的標準規範來修改的。<br><br>常見的中文無襯線比較可以參考<a href="https://docs.google.com/document/d/1UOCwR5B1UlV0l1d1bu79raDCtKwiCj2rTACBX3MrsAc/edit?usp=sharing" rel="external nofollow noopener noreferrer" target="_blank">這裡</a>。<br><br>※字型選擇輔助圖<br>非常在意字型符合國字標準字體<br><br><em>   是
+
+    </em>   偏好無襯線字型<br><br>            <em>   是
+
+                    </em>   微軟正黑體（Windows Vista+內建）<br>            <em>   思源黑體（開放字型）
+        </em>   否<br>            <em>   標楷體（Windows 內建）
+</em>   否<br>    <em>   偏好無襯線字型
+
+            </em>   是<br><br>                    <em>   思源黑體衍生字型（柔黑體等，多數為日本產因此不符合台灣規範的可能較高）</em>   微軟雅黑（Windows Vista+內建）<br><br>                        <em>   SimHei（Windows內建，簡體字型）
+
+                        </em>   Arial Unicode MS（Windows 內建，有中文Unicode 字型）<br><br>                        <em>   明瞭體（Windows Vista+內建，日文字型，日語：メイリオ，英文：Meiryo）
+
+                        </em>   MSGothic（Windows內建，日文字型）<br><br>                        <em>   Yu Gothic（Windows內建，日文字型）
+
+                        </em>   信黑體（付費中文字型）<br>一些 Windows 使用者甚至也會想辦法取得MAC的中文或日文字型，並使用在Windows 系統上已取得更好的視覺享受，再此就不多做討論。<br><br><h9>套用KillSerif Style補完最後的拼圖</h9>
+
+<p>設定好文字成像之後，接著還必須處理瀏覽器以甚麼字型來顯示。在螢幕顯示的情況，無襯線體的顯示效果要優於襯線體，因此黑體或圓體這類無襯線體是較好的選擇。但Firefox本身並沒有針對泛東亞使用者最佳化顯示字型的設定。因為僅透過內建字型設定並不能有效的讓泛東亞字型的顯示有一致性，就算開發團隊解決了圖示字型與文字字型分離設定的問題，但並不因為使得泛東亞字型的設定變得可接受。</p>
+<p>所以，目前仍需要藉助外部的力量進行調整。<a href="https://userstyles.org/styles/111687/killserif-style" rel="external nofollow noopener noreferrer" target="_blank">KillSerif Style</a>或許是其中一個目前最佳的選擇，仔細閱讀它的使用指南，根據你的使用的瀏覽器進行設定，搭配上述的內建設定，你應該可以取得最接近理想的顯示效果。</p>
+<h9>中文字型的悲哀</h9>
+
+<p>從上圖的「字型選擇輔助圖」可以清楚地看得出來，目前要找到一個符合「國字標準字體」規範的無襯線字型，唯一的選擇只有微軟的「正黑體」，更別說「微軟正黑體」在經歷了數代的更新之後仍存在許多問題（某些字在粗體顯示時會在右邊出現一個全型的中文空格、多年來為人詬病的字重不夠、顯示小號文字時非常難看等），這也造成許多使用者寧願放棄符合國字標準字體的微軟正黑體，而選擇<strike>敵國的</strike>開放的文泉驛黑體。</p>
+<p>除了是因為整個中文世界缺乏優秀的字型開發商（這個問題可能跟字型容易被流傳在網路上且華人社會較沒有付費購買字型的觀念有關），作業系統廠商也較不願意投資在中文字型的打造上（尤其台灣市場太小，多數使用者對字型要求與認識也不高）。</p>
+<p>備註：<br>本文只是簡單針對 Firefox 內建的字型成像選項做了一些簡單的整理與介紹，其中在字型的選擇上著墨比較多的是以 Windows 使用者的觀點出發。若發現任何錯誤或不完整的資訊，歡迎糾正和補足。</p>
+<p>本文最早發布於：2014/03/03</p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-Firefox-字型設定大全（成像設定、字型選擇、使用者樣式）';
+          this.page.title = 'Firefox 字型設定大全（成像設定、字型選擇、使用者樣式）';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/22235/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/16316/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">About</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li>t7yang</li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/t7yang" class="icon icon-github" target="_blank" rel="external nofollow noopener noreferrer">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>t7'Space &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank" rel="external nofollow noopener noreferrer">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 't7space';
+
+  
+  var disqus_url = 'https://t7yang.github.io/58804/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+</body>
+
+</html>

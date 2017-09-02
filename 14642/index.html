@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="t7yang">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="[Windows] 如何移除 8.1 討人厭的檔案總管側邊欄和資料夾">
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="t7&#39;Space">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>[Windows] 如何移除 8.1 討人厭的檔案總管側邊欄和資料夾 - t7&#39;Space</title>
+
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="/images/logo.png" alt="t7'Space" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  about
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/atom.xml">
+                
+                  rss
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            [Windows] 如何移除 8.1 討人厭的檔案總管側邊欄和資料夾
+            
+          </h1>
+          <p class="posted-on">
+          2013-11-11
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/Explorer/" rel="tag">
+                  Explorer
+                </a>
+              
+                <a href="/tags/System/" rel="tag">
+                  System
+                </a>
+              
+                <a href="/tags/Windows/" rel="tag">
+                  Windows
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <p>更新 Windows 8.1 後，相信肯定有不少人對新的檔案總管厭惡異常吧。沒必要的多加了六個資料夾在視窗中、側邊欄的「本機」子選單中硬塞給同樣的資料夾，微軟設計師的蠢又毫無疑問華麗的體現了一把（心理學家是否可以研究一下為什麼微軟都會搞出爛設計）。蒐集了一下移除的方法，一次過把它整理出來。<br><a name="more"></a></p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/Windows_8_1_This_PC_Explorer.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/Windows_8_1_This_PC_Explorer.png" alt="" title=" "></a></div><div style="text-align: center;">圖片來源：AskVG.com</div><br>新的檔案總管預設加了一堆不必要的重複資料夾，只會對使用者造成困擾而已。</p>
+<blockquote>
+<p>警告：<br>本篇只整理如何移除的方法，不負責幫你把移除的項目找回來，因此請三思後行。</p>
+<p>為了方便讀者快速移除，特別提供 <a href="http://1drv.ms/1t8gku4" rel="external nofollow noopener noreferrer" target="_blank">reg</a> 檔有需要請自行下載。</p>
+<p><h9>移除側邊欄「本機」子選單的資料夾</h9><br>其實要移除子選單中的資料夾比想像中的要來得簡單很多，只需要對本機重新命名即可。</p>
+</blockquote>
+<ol>
+<li>開啟檔案總管。</li>
+<li>右鍵點選側邊欄中的［本機］。</li>
+<li>在彈出的右鍵選單中選擇［重新命名］（直接點選［本機］後按［F2］也可以）。</li>
+<li>隨便輸入一個名稱，並按下［Enter］確認，這時你就會發現那些廢物的資料夾消失了。</li>
+<li><p>如果你還是喜歡選單的名稱為「本機」的話，你可以再次根據前面的步驟把它改回「本機」的名稱。<br><h9>移除「裝置和磁碟機」上方的資料夾</h9><br>這個比較麻煩，因為需要動到系統登錄檔，不過只要按著下面的步驟執行，很快就可以移除掉了。</p>
+</li>
+<li><p>按下快捷鍵［Winkey］＋［R］，輸入「regedit<strike>regdit</strike>」，開啟「登錄編輯程式」。或按下［Winkey］進去開始頁面，直接輸入「regedit」也行。</p>
+</li>
+<li>進入以下的路徑：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Current Version\explorer\MyComputer\NameSpace。</li>
+<li>刪除這些選單（你可以在刪除前右鍵匯出備份登錄檔）：</li>
+</ol>
+<ul>
+<li>{1CF1260C-4DD0-4ebb-811F-33C572699FDE}（「音樂」資料夾）</li>
+<li>{374DE290-123F-4565-9164-39C4925E467B}（「下載」資料夾）</li>
+<li>{3ADD1653-EB32-4cb0-BBD7-DFA0ABB5ACCA}（「圖片」資料夾）</li>
+<li>{A0953C92-50DC-43bf-BE83-3742FED03C9C}（「視訊」資料夾）</li>
+<li>{A8CDFF1C-4878-43be-B5FD-F8091C1C60D0}（「文件」資料夾）</li>
+<li>{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}（「桌面」資料夾）4.  移除後，重新整理檔案總管（或關掉重開一次檔案總管）那些資料夾就不見囉。<br>更多關於如何移除檔案總管中不要想要的項目資訊（譬如移除「家用群組」和「網路」），請自行參考下方的本文資料來源。</li>
+</ul>
+<p>來源：<a href="http://www.askvg.com/tips-tweak-and-customize-windows-8-1-explorer-this-pc/" rel="external nofollow noopener noreferrer" target="_blank">AskVG.com</a></p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-Windows-如何移除-8-1-討人厭的檔案總管側邊欄和資料夾';
+          this.page.title = '[Windows] 如何移除 8.1 討人厭的檔案總管側邊欄和資料夾';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/7104/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/10909/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">About</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li>t7yang</li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/t7yang" class="icon icon-github" target="_blank" rel="external nofollow noopener noreferrer">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>t7'Space &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank" rel="external nofollow noopener noreferrer">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 't7space';
+
+  
+  var disqus_url = 'https://t7yang.github.io/14642/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+</body>
+
+</html>
