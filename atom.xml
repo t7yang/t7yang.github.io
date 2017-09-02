@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://t7yang.github.io/"/>
-  <updated>2017-09-02T10:44:43.464Z</updated>
+  <updated>2017-09-02T11:41:07.261Z</updated>
   <id>https://t7yang.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Windows 正常執行 bash</title>
+    <link href="https://t7yang.github.io/7653/"/>
+    <id>https://t7yang.github.io/7653/</id>
+    <published>2017-09-02T11:38:56.000Z</published>
+    <updated>2017-09-02T11:41:07.261Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 Windows 下安裝 <code>git</code> 的選擇通常是 <code>git for windows</code> ，無論是使用安裝版還是免安裝版的 cmder ，自帶了 bash 這個終端機介面。但經常會遇到找到指令或是 <code>npm</code> 安裝的程式無法正確執行。</p>
+<h3 id="一般指令找不到（ls）"><a href="#一般指令找不到（ls）" class="headerlink" title="一般指令找不到（ls）"></a>一般指令找不到（ls）</h3><ul>
+<li>在 bash 下輸入 <code>cd ~</code> 確認你的家目錄在哪（可以 <code>ls</code> 出來看看）。</li>
+<li>到家目錄新增一個 <code>.bashrc</code>。</li>
+<li>把 <code>git for windows</code> 的 <code>/usr/bin</code> 系統絕對路徑合併到 <code>$PATH</code> 。<br><code>PATH=&quot;$PATH:/c/program files/git for windows/usr/bin&quot;</code></li>
+<li>真實路徑或許會因電腦各異，請自行確認。</li>
+</ul>
+<h3 id="npm-及相關的指令找不到"><a href="#npm-及相關的指令找不到" class="headerlink" title="npm 及相關的指令找不到"></a><code>npm</code> 及相關的指令找不到</h3><ul>
+<li>找到你的 <code>npm</code> 指令所在位置：<code>where npm</code></li>
+<li>以管理員身分執行系統的 <code>cmd</code></li>
+<li><code>cd</code> 到 <code>git for windows</code> 路徑</li>
+<li>執行：<code>mklink /d node_modules &quot;git for windows 絕對路徑&quot;</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 Windows 下安裝 &lt;code&gt;git&lt;/code&gt; 的選擇通常是 &lt;code&gt;git for windows&lt;/code&gt; ，無論是使用安裝版還是免安裝版的 cmder ，自帶了 bash 這個終端機介面。但經常會遇到找到指令或是 &lt;code&gt;npm&lt;/code&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[音樂] 聊聊我喜歡「那種調調」的音樂</title>
@@ -229,9 +260,9 @@
     </summary>
     
     
-      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
-    
       <category term="Firefox Font Settings" scheme="https://t7yang.github.io/tags/Firefox-Font-Settings/"/>
+    
+      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
     
   </entry>
   
@@ -299,9 +330,9 @@
     </summary>
     
     
-      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
-    
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
+    
+      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
     
       <category term="Addons" scheme="https://t7yang.github.io/tags/Addons/"/>
     
@@ -421,13 +452,13 @@
     </summary>
     
     
-      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
-    
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="Firefox Appearance" scheme="https://t7yang.github.io/tags/Firefox-Appearance/"/>
-    
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
+    
+      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
+    
+      <category term="Firefox Appearance" scheme="https://t7yang.github.io/tags/Firefox-Appearance/"/>
     
   </entry>
   
@@ -521,11 +552,11 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
+      <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
     
       <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
-      <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
   </entry>
   
@@ -630,11 +661,11 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
+      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
+    
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
       <category term="Firefox Font Settings" scheme="https://t7yang.github.io/tags/Firefox-Font-Settings/"/>
-    
-      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
       <category term="UserStyle" scheme="https://t7yang.github.io/tags/UserStyle/"/>
     
@@ -663,9 +694,9 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
-    
       <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
+    
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
   </entry>
   
@@ -914,55 +945,6 @@
     
     
       <category term="t7創作" scheme="https://t7yang.github.io/tags/t7%E5%89%B5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Opera] Opera 創辦人 Jon 宣布離開 Opera</title>
-    <link href="https://t7yang.github.io/42391/"/>
-    <id>https://t7yang.github.io/42391/</id>
-    <published>2011-06-25T16:38:00.000Z</published>
-    <updated>2017-09-02T11:24:46.983Z</updated>
-    
-    <content type="html"><![CDATA[<p>一則令所有 Opera 忠實使用者都感到憂傷的消息－－Opera 聯合創辦人 譚咏文（Jon S. von Tetzchner）正式宣布離開 Opera。根據 Jon 的給所有 Opera 職員的公開信，他的離開主要是和董事會的意見不合。無論是因為甚麼原因，Jon 的離開對使用者來說真的很難過的消息。</p>
-<p><a name="more"></a></p>
-<p><a href="http://dl.dropbox.com/u/99508/t7Space/Photos/Jon_von_Tetzchner.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://dl.dropbox.com/u/99508/t7Space/Photos/Jon_von_Tetzchner.png" alt=""></a><br>來自 Opera Press News 的文稿＋我的業餘翻譯：</p>
-<p>The Board of Opera Software and Jon S. von Tetzchner today together announce that von Tetzchner is leaving Opera Software. Von Tetzchner co-founded Opera Software in 1995, and led the company up to 2010.</p>
-<p>Opera 董事會和 Jon S. von Tetzchner 於今日一同宣布 von Tetzchner 將離開 Opera Software。Von Tetzchner 於 1995 和伙伴一同創辦 Opera Software 並領導公司到 2010。</p>
-<p>“It is of course a choice that brings up a lot of emotions”, says von Tetzchner. “When we first started out, we were a few guys in a really small office - now we are spread all over the world, have over 740 employees and over 200 million users. I am very proud of what we have accomplished, and look forward to following the company closely also in the future.”</p>
-<p>「這個決定肯定會給大家五味雜陳的感覺」，von Tertzchner 說到。「當我們開始創辦時，我們只有幾個傢伙和一個很小的辦公室－－現在我們已經擴張到全世界了，擁有 740 名職員和約 2 億名使用者。我對我們取得的成就感到非常驕傲，並期望在未來跟公司更加緊密。」</p>
-<p>“We have had a lot of fun during these years, and to say that Jon has created a great company is an understatement”, says Lars Boilesen, CEO of Opera Software. “He has taught me and everyone working here a lot. He believed in, and pushed out innovation after innovation that we see our competitors constantly struggling with copying, making Opera a first mover in the technological development of web browsers as we know them today. We are very proud of Jon, and of course of the company”, says Boilesen. “We are aiming at 500 million users by 2013, and we have a very positive flow right now.</p>
-<p>「這些年來我們經歷了很多歡樂的時光，而且 Jon 是那麼的低調的創造了一個如此宏偉的公司」，Lars Boilesen 說，Opera Software 的 CEO。「他指導了我和這裡所有的人。他相信並持續推出更多的創新與創意，讓競爭對手只有不斷模仿的分，讓 Opera 總是成為邁向瀏覽器開發最新科技的先行者。我們對 Jon 和公司都感到非常驕傲」，Boilesen 說。「我們期望在 2013 年可以達到 5 億名使用者的目標，而且我們現在有非常好的上升趨勢」。</p>
-<p>Von Tetzchner will be with Opera Software until 30th of June and has ideas about new projects, but is not ready to reveal any of his ideas as of right now.</p>
-<p>Von Tetzchner 將會陪伴 Opera Software 直到今年的 6 月 30 號並且他已經有一個新的專案點子，但他並不打算再現在揭露他的點子。</p>
-<hr>
-<p>以下是 Jon 的公開信和來自「<a href="http://news.cnyes.com/Content/20110625/KDXGW1RVFBNNY.shtml?c=headline_sitehead" rel="external nofollow noopener noreferrer" target="_blank">鉅亨網</a>」的翻譯報導：</p>
-<p>Dear All,</p>
-<p>致全體員工：</p>
-<p>It is with a heavy heart that I send this message. Next week will be my last at Opera. It has become clear that The Board, Management and I do not share the same values and we do not have the same opinions on how to keep evolving Opera. As a result I have come to an agreement with the Board to end my time at Opera. I feel the Board and Management is more quarterly focused than me. I have always worked to build the company for the future. I believe the foundation we have is very solid to build further upon.</p>
-<p>我懷著沉重的心情發布這項消息，下周將是我在Opera的最後一周。很明顯董事會、管理層和我沒有共同的價值觀，在如何持續發展Opera的問題上也沒有相同的觀點。因此，我已經與董事會達成協議，來終止我在Opera的職業生涯。我覺得，董事會和管理層比我更關注季度業績。我一直都致力於以未來發展為目標來建設這家公司。我相信，我們擁有的基礎對於未來進一步建設公司來說是非常堅實的。</p>
-<p>I do believe strongly in Opera as a company, and in all of you working here. Our products actually make a difference for a lot of people in the world, and I wish you all the best of luck moving forward. I will be following the company closely and rooting for you all.</p>
-<p>我確實十分信任Opera及其所有員工，我們的產品在實際上讓全球許\多人的生活發生了變化。我希望，未來你們大家都有好運。我將關注Opera的發展情況，並為你們所有人加油。</p>
-<p>Yours truly,<br>Jon.</p>
-<p>真誠的<br>譚詠文</p>
-<hr>
-<p>對於一直是 Opera 使用者的我而言，這個消息確實讓我有些五味雜陳，驚訝之餘更有些難過。畢竟 Jon 可謂是 Opera 瀏覽器的靈魂人物，而且身體健康又值壯年的他宣布離開，可謂是最大的震撼。</p>
-<p>從 Opera 的市占率來持續創新的歷史來看，它一直是一家很有個性的瀏覽器公司，而且一直小本經營不畏懼市場上的那些美國老大哥。這也是我一直對 Opera 不離不棄的原因。但是軟體一旦成為營利的公司，收益將成為董事會最重視的事。而一旦推動著 Opera 的創新前進的 Jon 都離開後，我不知道 Opera 的未來會走向一個怎樣的方向。甚至未來面對「入侵」時會主戰還是主降？</p>
-<p>再加上蘋果公司在賈伯斯離開後也出現後嚴重的危機，可見一間公司的靈魂人物是非常重要的。不知道 Jon 的離開對 Opera 未來的發展會有甚麼影響？未來又是否會像賈伯斯一樣回歸。</p>
-<p>撇開不開心和擔憂的事，Jon 口中的新的專案到底是甚麼呢？Opera 的忠實使用者應該都知道 Jon 和伙伴一手打造了 Opera。未來是否會有第二個呢？哈哈，我只是亂猜而已。</p>
-<p>[via <a href="http://www.opera.com/press/releases/2011/06/24/" rel="external nofollow noopener noreferrer" target="_blank">Opera Press News</a> / <a href="http://www.favbrowser.com/opera-founder-leaves-opera-board-and-management-to-blame/" rel="external nofollow noopener noreferrer" target="_blank">Favbrowser</a> / <a href="http://techcrunch.com/2011/06/24/opera-founder-jon-s-von-tetzchner-resigns-over-differences-with-board/" rel="external nofollow noopener noreferrer" target="_blank">TechCrunch</a>]</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一則令所有 Opera 忠實使用者都感到憂傷的消息－－Opera 聯合創辦人 譚咏文（Jon S. von Tetzchner）正式宣布離開 Opera。根據 Jon 的給所有 Opera 職員的公開信，他的離開主要是和董事會的意見不合。無論是因為甚麼原因，Jon 的離開對
-    
-    </summary>
-    
-    
-      <category term="Opera" scheme="https://t7yang.github.io/tags/Opera/"/>
-    
-      <category term="Opera News" scheme="https://t7yang.github.io/tags/Opera-News/"/>
     
   </entry>
   

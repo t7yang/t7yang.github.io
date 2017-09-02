@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[在 Windows 正常執行 bash]]></title>
+      <url>/7653/</url>
+      <content type="html"><![CDATA[<p>在 Windows 下安裝 <code>git</code> 的選擇通常是 <code>git for windows</code> ，無論是使用安裝版還是免安裝版的 cmder ，自帶了 bash 這個終端機介面。但經常會遇到找到指令或是 <code>npm</code> 安裝的程式無法正確執行。</p>
+<h3 id="一般指令找不到（ls）"><a href="#一般指令找不到（ls）" class="headerlink" title="一般指令找不到（ls）"></a>一般指令找不到（ls）</h3><ul>
+<li>在 bash 下輸入 <code>cd ~</code> 確認你的家目錄在哪（可以 <code>ls</code> 出來看看）。</li>
+<li>到家目錄新增一個 <code>.bashrc</code>。</li>
+<li>把 <code>git for windows</code> 的 <code>/usr/bin</code> 系統絕對路徑合併到 <code>$PATH</code> 。<br><code>PATH=&quot;$PATH:/c/program files/git for windows/usr/bin&quot;</code></li>
+<li>真實路徑或許會因電腦各異，請自行確認。</li>
+</ul>
+<h3 id="npm-及相關的指令找不到"><a href="#npm-及相關的指令找不到" class="headerlink" title="npm 及相關的指令找不到"></a><code>npm</code> 及相關的指令找不到</h3><ul>
+<li>找到你的 <code>npm</code> 指令所在位置：<code>where npm</code></li>
+<li>以管理員身分執行系統的 <code>cmd</code></li>
+<li><code>cd</code> 到 <code>git for windows</code> 路徑</li>
+<li>執行：<code>mklink /d node_modules &quot;git for windows 絕對路徑&quot;</code></li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[[音樂] 聊聊我喜歡「那種調調」的音樂]]></title>
       <url>/26391/</url>
       <content type="html"><![CDATA[<p>「……我最喜歡妳唬爛說謊的模樣，逗我笑……」，我為什麼會有這麼「邪惡」的空耳，哈哈哈</p>
@@ -184,9 +205,9 @@
         
         <tags>
             
-            <tag> Browser </tag>
-            
             <tag> Firefox Font Settings </tag>
+            
+            <tag> Browser </tag>
             
         </tags>
         
@@ -248,9 +269,9 @@
         
         <tags>
             
-            <tag> Browser </tag>
-            
             <tag> Firefox </tag>
+            
+            <tag> Browser </tag>
             
             <tag> Addons </tag>
             
@@ -344,13 +365,13 @@
         
         <tags>
             
-            <tag> Browser </tag>
-            
             <tag> Firefox </tag>
             
-            <tag> Firefox Appearance </tag>
-            
             <tag> O2FP </tag>
+            
+            <tag> Browser </tag>
+            
+            <tag> Firefox Appearance </tag>
             
         </tags>
         
@@ -431,11 +452,11 @@
             
             <tag> Firefox </tag>
             
-            <tag> O2FP </tag>
+            <tag> Firefox Cache </tag>
             
             <tag> Firefox Settings </tag>
             
-            <tag> Firefox Cache </tag>
+            <tag> O2FP </tag>
             
         </tags>
         
@@ -526,11 +547,11 @@
             
             <tag> Firefox </tag>
             
+            <tag> Firefox Settings </tag>
+            
             <tag> O2FP </tag>
             
             <tag> Firefox Font Settings </tag>
-            
-            <tag> Firefox Settings </tag>
             
             <tag> UserStyle </tag>
             
@@ -553,9 +574,9 @@
             
             <tag> Firefox </tag>
             
-            <tag> O2FP </tag>
-            
             <tag> Firefox Settings </tag>
+            
+            <tag> O2FP </tag>
             
         </tags>
         
