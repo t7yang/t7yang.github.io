@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://t7yang.github.io/"/>
-  <updated>2017-09-02T11:41:07.261Z</updated>
+  <updated>2017-09-02T11:42:59.407Z</updated>
   <id>https://t7yang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://t7yang.github.io/7653/"/>
     <id>https://t7yang.github.io/7653/</id>
     <published>2017-09-02T11:38:56.000Z</published>
-    <updated>2017-09-02T11:41:07.261Z</updated>
+    <updated>2017-09-02T11:42:59.407Z</updated>
     
     <content type="html"><![CDATA[<p>在 Windows 下安裝 <code>git</code> 的選擇通常是 <code>git for windows</code> ，無論是使用安裝版還是免安裝版的 cmder ，自帶了 bash 這個終端機介面。但經常會遇到找到指令或是 <code>npm</code> 安裝的程式無法正確執行。</p>
 <h3 id="一般指令找不到（ls）"><a href="#一般指令找不到（ls）" class="headerlink" title="一般指令找不到（ls）"></a>一般指令找不到（ls）</h3><ul>
@@ -43,6 +43,10 @@
     
     </summary>
     
+    
+      <category term="Windows" scheme="https://t7yang.github.io/tags/Windows/"/>
+    
+      <category term="bash" scheme="https://t7yang.github.io/tags/bash/"/>
     
   </entry>
   
@@ -552,11 +556,11 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
       <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
+      <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
     
   </entry>
   
@@ -661,11 +665,11 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
+      <category term="Firefox Font Settings" scheme="https://t7yang.github.io/tags/Firefox-Font-Settings/"/>
     
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
-      <category term="Firefox Font Settings" scheme="https://t7yang.github.io/tags/Firefox-Font-Settings/"/>
+      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
       <category term="UserStyle" scheme="https://t7yang.github.io/tags/UserStyle/"/>
     
@@ -694,9 +698,9 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
-    
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
+    
+      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
   </entry>
   

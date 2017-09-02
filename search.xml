@@ -21,6 +21,14 @@
 ]]></content>
       
         
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> bash </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -452,11 +460,11 @@
             
             <tag> Firefox </tag>
             
-            <tag> Firefox Cache </tag>
+            <tag> O2FP </tag>
             
             <tag> Firefox Settings </tag>
             
-            <tag> O2FP </tag>
+            <tag> Firefox Cache </tag>
             
         </tags>
         
@@ -547,11 +555,11 @@
             
             <tag> Firefox </tag>
             
-            <tag> Firefox Settings </tag>
+            <tag> Firefox Font Settings </tag>
             
             <tag> O2FP </tag>
             
-            <tag> Firefox Font Settings </tag>
+            <tag> Firefox Settings </tag>
             
             <tag> UserStyle </tag>
             
@@ -574,9 +582,9 @@
             
             <tag> Firefox </tag>
             
-            <tag> Firefox Settings </tag>
-            
             <tag> O2FP </tag>
+            
+            <tag> Firefox Settings </tag>
             
         </tags>
         
