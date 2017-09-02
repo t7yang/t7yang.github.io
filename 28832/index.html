@@ -156,8 +156,7 @@
         <!-- Post Main Content -->
         <div class="entry-content">
           <p>從 Opera 轉用 Firefox 後肯定會遇到很多不適應的情況，然而因為設計理念與結構的不同，可以從內部設定去調整的空間其實不大，但這樣的做法仍是首選，因為它的代價最小。我會盡可能蒐集一些可調整的內部設定，以下是目前所蒐集到的成果。<br><a name="more"></a><br>雖然這裡介紹的只有四個內部設定，但其實在整個 O2F 計畫中用到的遠多於這些，但為了在分類上做到比較精細，因此這裡只會羅列那些沒有被歸類到大分類項目的內部設定。</p>
-<p><h9>調整為與 Opera 類似的行為</h9></p>
-<blockquote>
+<h2 id="調整為與-Opera-類似的行為"><a href="#調整為與-Opera-類似的行為" class="headerlink" title="調整為與 Opera 類似的行為"></a>調整為與 Opera 類似的行為</h2><blockquote>
 <p>路徑：browser.link.open_newwindow.restriction<br>預設值：2<br>預設行為：瀏覽器會根據 JS 的規定選擇連結是否以新的彈出視窗開啟<br>建議值：0<br>調整後行為：不允許 JS 使用彈出視窗的方式開啟連結<br>路徑：browser.tabs.closeWindowWithLastTab<br>預設值：TRUE<br>預設行為：關閉視窗中僅有的唯一分頁會關閉整個 Firefox<br>建議值：FALSE<br>調整後行為：唯一的分頁可關閉，且關閉後會彈出首頁</p>
 <p><h9>可提升 Firefox 可用性</h9><br>路徑：accessibility.typeaheadfind.enablesound<br>預設值：TRUE<br>預設行為：文內搜尋錯誤時播放提示音效<br>建議值：FALSE<br>調整後行為：關閉文內搜尋錯誤提示音效<br>路徑：browser.download.manager.showAlertOnComplete<br>預設值：TRUE<br>預設行為：下載完成後顯示彈出方塊提醒<br>建議值：FALSE<br>調整後行為：關閉方塊提醒，下載管理圖示已有下載完成特效<br>未來若有發現其他能替提升可用性或讓 Firefox 更接近 Opera 設計的內部設定，還會透過編輯新增的方式來修改此文章。</p>
 </blockquote>

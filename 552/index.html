@@ -151,27 +151,35 @@
         </div>
         <!-- Post Main Content -->
         <div class="entry-content">
-          <p>因為設計的理念不同，因此為了要讓 Firefox 能夠具備 Opera Presto 版的使用體驗，必須要從內部設定、UserStyle / UserScript / userChrome（CSS、JS）、延伸套件（Firefox 稱為附加元件）方面著手，改造的理念會先以能夠透過內部設定為優先，延伸套件作為最後的選項。但是有時為了能夠更方便使用者備份，會選擇性以延伸套件為優先解決方案，然而文章內還是盡可能把其他替代方案列出讓讀者選擇。<br><a name="more"></a></p>
+          <p>因為設計的理念不同，因此為了要讓 Firefox 能夠具備 Opera Presto 版的使用體驗，必須要從內部設定、UserStyle / UserScript / userChrome（CSS、JS）、延伸套件（Firefox 稱為附加元件）方面著手，改造的理念會先以能夠透過內部設定為優先，延伸套件作為最後的選項。但是有時為了能夠更方便使用者備份，會選擇性以延伸套件為優先解決方案，然而文章內還是盡可能把其他替代方案列出讓讀者選擇。</p>
+<p><a name="more"></a></p>
 <blockquote>
 <p>文章待續中……不時更新<br>完整項目請參考 <a href="https://docs.google.com/spreadsheet/ccc?key=0AkY2yayFmcCqdFprSVVlZjkzX3FjOVN1aWxaa2FtcUE&amp;usp=sharing" rel="external nofollow noopener noreferrer" target="_blank">O2FP</a> 工作表<br>在改造的過程中會使用到 UserStyle 和 UserScript，因此建議讀者務必先安裝可以管理兩者的延伸套件。以下為幾個類似功能的套件，粗體者為 t7 目前正在使用的套件。</p>
 </blockquote>
 <ul>
-<li><p>UserStyle</p>
-</li>
-<li><p><a href="https://addons.mozilla.org/firefox/addon/stylish" rel="external nofollow noopener noreferrer" target="_blank"><strong>Stylish</strong></a>*   UserScript<br><h9>內部設定</h9><br>在內部設定中，我們可以調整四個選項，其中兩個是讓 Firefox 用起來更像 Opera，另外兩個則是關閉一些惱人的提示。</p>
-</li>
-<li><p><a href="http://t7yang.blogspot.com/2013/08/tweak-firefox-settings.html" rel="external nofollow noopener noreferrer" target="_blank">調整 Firefox 內部設定</a><br><h9>字型設定</h9><br>Firefox 的字型設定較 Opera 來得複雜且麻煩，但 O2FP 的計畫已經解決字型設定的問題，現在你可以指定你喜歡的字型來作為瀏覽器顯示中文的方式。</p>
-</li>
-<li><p><a href="http://t7yang.blogspot.com/2013/08/tweak-firefox-font-settings.html" rel="external nofollow noopener noreferrer" target="_blank">Firefox 字型調整</a><br><h9>快取管理</h9><br>Firefox 的快取設定同樣較 Opera 來的麻煩，在這裡教你如何在指定快取路徑的同時還可以做到關閉瀏覽器後自動刪除快取和隱私資訊的方法，讓你回到那個熟悉的 Opera 快取和隱私管理行為。</p>
-</li>
-<li><p><a href="http://t7yang.blogspot.com/2013/08/delete-private-data-after-closed-firefox-with-diskcache.html" rel="external nofollow noopener noreferrer" target="_blank">設定 Firefox 快取路徑且在關閉後刪除隱私資料</a><br><h9>介面調整</h9><br>Firefox 的介面雖然和 Opera 頗為相似，但仍免不了在細節上有些差異，這裡會教你如何調整標題列與分頁列的在視窗非最大化時的高度，同時還會推薦幾個不錯的 Firefox 主題，讓你可以得不到它的「人」也可以得到它的「皮」。</p>
-</li>
-<li><p><a href="http://t7yang.serveblog.net/2014/01/FXOpera.html" rel="external nofollow noopener noreferrer" target="_blank">FXOpera 讓你找回 Opera 的「人」</a><br><h9>找回 Opera 的功能</h9><br>Opera 內建功能之強大是舉世公認的，這樣的設計理念和其他主流瀏覽器有很大的差異（雖然新一代 Opera 瀏覽器已經把這種設計理念完全拋棄）。為此我們幾乎需要借助眾多 Firefox 的延伸套件才能重構出與原本 Opera 類似的使用體驗。以下是我們在 Firefox 中要找回來的功能。</p>
-</li>
+<li>UserStyle</li>
+<li><a href="https://addons.mozilla.org/firefox/addon/stylish" rel="external nofollow noopener noreferrer" target="_blank"><strong>Stylish</strong></a>- UserScript</li>
 </ul>
-<p><h9>找回你習慣的行為</h9><br>Opera 內建的選項貼心，讓使用者打造出他們最喜歡的使用習慣，尤其在一些瀏覽器的行為上；這點是其他瀏覽器所不具備的。因此我需要藉助延伸套件的方式才能把一些我們很熟悉的瀏覽器行為找回來，這裡涉及的通常是如何調整一些分頁和視窗的行為，我會拆開幾個部分來說明。</p>
-<p><h9>找回你熟悉的鍵鼠快捷鍵</h9><br>除了滑鼠手勢外，一些其他的鍵盤快捷鍵和滑鼠行為也是 Opera 相當引以為傲的地方。我不會在這裡說明滑鼠手勢，而是找回一兩個 Opera 原本的習慣和一些你可能不知道 Firefox 可以這樣用的快捷鍵。</p>
-<p><h9>找回你想要的延伸套件</h9><br>雖然 Opera 是最晚入場延伸套件的瀏覽器，但這無阻它擁有一些殺手級延伸套件。一旦離開 Opera 你肯定會懷念這些套件，因此如何在 Firefox 中找到足夠好的替代品，就成了當務之急。這裡會列出一些我原本在 Opera 就有安裝的套件和它們在 Firefox 上的對應替代選項，當然還有一些不是在這裏面的，但我相信它們對提升 Firefox 應該有很大的幫助。</p>
+<h2 id="內部設定"><a href="#內部設定" class="headerlink" title="內部設定"></a>內部設定</h2><p>在內部設定中，我們可以調整四個選項，其中兩個是讓 Firefox 用起來更像 Opera，另外兩個則是關閉一些惱人的提示。</p>
+<ul>
+<li><a href="http://t7yang.blogspot.com/2013/08/tweak-firefox-settings.html" rel="external nofollow noopener noreferrer" target="_blank">調整 Firefox 內部設定</a></li>
+</ul>
+<h2 id="字型設定"><a href="#字型設定" class="headerlink" title="字型設定"></a>字型設定</h2><p>Firefox 的字型設定較 Opera 來得複雜且麻煩，但 O2FP 的計畫已經解決字型設定的問題，現在你可以指定你喜歡的字型來作為瀏覽器顯示中文的方式。</p>
+<ul>
+<li><a href="http://t7yang.blogspot.com/2013/08/tweak-firefox-font-settings.html" rel="external nofollow noopener noreferrer" target="_blank">Firefox 字型調整</a></li>
+</ul>
+<h2 id="快取管理"><a href="#快取管理" class="headerlink" title="快取管理"></a>快取管理</h2><p>Firefox 的快取設定同樣較 Opera 來的麻煩，在這裡教你如何在指定快取路徑的同時還可以做到關閉瀏覽器後自動刪除快取和隱私資訊的方法，讓你回到那個熟悉的 Opera 快取和隱私管理行為。</p>
+<ul>
+<li><a href="http://t7yang.blogspot.com/2013/08/delete-private-data-after-closed-firefox-with-diskcache.html" rel="external nofollow noopener noreferrer" target="_blank">設定 Firefox 快取路徑且在關閉後刪除隱私資料</a></li>
+</ul>
+<h2 id="介面調整"><a href="#介面調整" class="headerlink" title="介面調整"></a>介面調整</h2><p>Firefox 的介面雖然和 Opera 頗為相似，但仍免不了在細節上有些差異，這裡會教你如何調整標題列與分頁列的在視窗非最大化時的高度，同時還會推薦幾個不錯的 Firefox 主題，讓你可以得不到它的「人」也可以得到它的「皮」。</p>
+<ul>
+<li><a href="http://t7yang.serveblog.net/2014/01/FXOpera.html" rel="external nofollow noopener noreferrer" target="_blank">FXOpera 讓你找回 Opera 的「人」</a></li>
+</ul>
+<h2 id="找回-Opera-的功能"><a href="#找回-Opera-的功能" class="headerlink" title="找回 Opera 的功能"></a>找回 Opera 的功能</h2><p>Opera 內建功能之強大是舉世公認的，這樣的設計理念和其他主流瀏覽器有很大的差異（雖然新一代 Opera 瀏覽器已經把這種設計理念完全拋棄）。為此我們幾乎需要借助眾多 Firefox 的延伸套件才能重構出與原本 Opera 類似的使用體驗。以下是我們在 Firefox 中要找回來的功能。</p>
+<h2 id="找回你習慣的行為"><a href="#找回你習慣的行為" class="headerlink" title="找回你習慣的行為"></a>找回你習慣的行為</h2><p>Opera 內建的選項貼心，讓使用者打造出他們最喜歡的使用習慣，尤其在一些瀏覽器的行為上；這點是其他瀏覽器所不具備的。因此我需要藉助延伸套件的方式才能把一些我們很熟悉的瀏覽器行為找回來，這裡涉及的通常是如何調整一些分頁和視窗的行為，我會拆開幾個部分來說明。</p>
+<h2 id="找回你熟悉的鍵鼠快捷鍵"><a href="#找回你熟悉的鍵鼠快捷鍵" class="headerlink" title="找回你熟悉的鍵鼠快捷鍵"></a>找回你熟悉的鍵鼠快捷鍵</h2><p>除了滑鼠手勢外，一些其他的鍵盤快捷鍵和滑鼠行為也是 Opera 相當引以為傲的地方。我不會在這裡說明滑鼠手勢，而是找回一兩個 Opera 原本的習慣和一些你可能不知道 Firefox 可以這樣用的快捷鍵。</p>
+<h2 id="找回你想要的延伸套件"><a href="#找回你想要的延伸套件" class="headerlink" title="找回你想要的延伸套件"></a>找回你想要的延伸套件</h2><p>雖然 Opera 是最晚入場延伸套件的瀏覽器，但這無阻它擁有一些殺手級延伸套件。一旦離開 Opera 你肯定會懷念這些套件，因此如何在 Firefox 中找到足夠好的替代品，就成了當務之急。這裡會列出一些我原本在 Opera 就有安裝的套件和它們在 Firefox 上的對應替代選項，當然還有一些不是在這裏面的，但我相信它們對提升 Firefox 應該有很大的幫助。</p>
 
         </div>
       </article>

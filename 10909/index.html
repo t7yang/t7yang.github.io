@@ -146,12 +146,12 @@
                   O2FP
                 </a>
               
-                <a href="/tags/Firefox Cache/" rel="tag">
-                  Firefox Cache
-                </a>
-              
                 <a href="/tags/Firefox Settings/" rel="tag">
                   Firefox Settings
+                </a>
+              
+                <a href="/tags/Firefox Cache/" rel="tag">
+                  Firefox Cache
                 </a>
               
             
@@ -159,16 +159,17 @@
         </div>
         <!-- Post Main Content -->
         <div class="entry-content">
-          <p>基本上從 Opera 轉到 Firefox 在快取設定是不會遇到太大的問題。嚴格來說，Firefox 快取的設定上還比 Opera 更完善，然而在關閉後刪除特定快取和個人隱私的部分和快取路徑設定之間會碰到一定的問題。<br><a name="more"></a><br>雖然 Firefox 在隱私資料和快取的選項上比起 Opera 算是有過之而無不及，但針對自訂快取目錄和關閉瀏覽器後刪除特定隱私資料之間卻必須做出妥協——<strong>也就說當你自訂了快取路徑後，就無法使用「結束 Firefox 時清理歷史記錄」</strong>；這也是我在轉用 Firefox 後最大的不習慣地方。</p>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings01.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings01.png" alt=""></a></div>
-
+          <p>基本上從 Opera 轉到 Firefox 在快取設定是不會遇到太大的問題。嚴格來說，Firefox 快取的設定上還比 Opera 更完善，然而在關閉後刪除特定快取和個人隱私的部分和快取路徑設定之間會碰到一定的問題。</p>
+<p><a name="more"></a></p>
+<p>雖然 Firefox 在隱私資料和快取的選項上比起 Opera 算是有過之而無不及，但針對自訂快取目錄和關閉瀏覽器後刪除特定隱私資料之間卻必須做出妥協——<strong>也就說當你自訂了快取路徑後，就無法使用「結束 Firefox 時清理歷史記錄」</strong>；這也是我在轉用 Firefox 後最大的不習慣地方。</p>
+<p><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings01.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings01.png" alt=""></a></p>
 <p>從上圖中（紅色框中）你可以選擇瀏覽器對隱私資料處理方式，然而一旦勾選了「結束 Firefox 時清理歷史記錄」，則 Firefox 會自動停用自訂磁碟快取目錄功能，使得你無法指定快取路徑。這對有習慣把快取目錄指定到 RAMDISK 的使用者來說相當不方便。</p>
 <blockquote>
 <p>Firefox 的記憶體快取：<br>RAMDISK 是不少人拿來加速系統效能的一種手段，然而這樣的作法對一般的使用者並不親切。因此如果你沒有使用 RAMDISK 的習慣，又想加速 Firefox 快取的效能，最好的做法是使用磁碟快取背道而馳的「完全關閉磁碟快取」並經可能讓瀏覽起來關係記憶體快取的大小。</p>
 <p>如此 Firefox 會把快取都放置到記憶體中來加速快取存取的效果（但下載中的暫存還是存放在系統的暫存目錄），下文還會提到調整記憶體快取的設定。<br>接下來要說明如何使用自訂快取目錄的同時還可以讓瀏覽器在關閉後自動刪除特定的隱私資料：</p>
 </blockquote>
 <ol>
-<li>首先開啟 about:config，右鍵叫出選單，選擇新增→字串，把這個字串貼上「browser.cache.disk.parent_directory」。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings02.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings02.png" alt=""></a>  <a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings03.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings03.png" alt=""></a>2.  輸入你要指定的路徑。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings04.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings04.png" alt=""></a>3.  安裝「Click&amp;Clean」附加元件，然後重新啟動瀏覽器，附加元件和快取路徑就會開始生效。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings05.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings05.png" alt=""></a>4.  重新啟動後，網址列旁會顯示 Click&amp;Clean 的圖示，點開選單選擇「Preferences」。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings06.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings06.png" alt=""></a>5.  確保你勾選了「Clear browsing data when browser closes」，這樣附加元件就會在瀏覽器關閉後自動清除隱私資料。<br><div class="separator" style="clear: both; text-align: center;"><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings07.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings07.png" alt=""></a></div>6.  點選「Clear private data」可以選擇當關閉瀏覽器後要刪除哪些資料。你可以選擇清除的時間範圍和清除的項目。手動清除後一次後元件就會記住你的選擇了。<br><h9>調整快取大小上限</h9><br>無論是記憶體快取還是磁碟快取，Firefox 都提供了快取大小上限的選項。磁碟快取上限的選項可以到圖形介面的「選項」中設定，記憶體快取上限則只能透過 about:config。</li>
+<li>首先開啟 about:config，右鍵叫出選單，選擇新增→字串，把這個字串貼上「browser.cache.disk.parent_directory」。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings02.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings02.png" alt=""></a>  <a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings03.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings03.png" alt=""></a>2.  輸入你要指定的路徑。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings04.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings04.png" alt=""></a>3.  安裝「Click&amp;Clean」附加元件，然後重新啟動瀏覽器，附加元件和快取路徑就會開始生效。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings05.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings05.png" alt=""></a>4.  重新啟動後，網址列旁會顯示 Click&amp;Clean 的圖示，點開選單選擇「Preferences」。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings06.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings06.png" alt=""></a>5.  確保你勾選了「Clear browsing data when browser closes」，這樣附加元件就會在瀏覽器關閉後自動清除隱私資料。<br><a href="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings07.png" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://dl.dropboxusercontent.com/u/99508/t7Space/Photos/FirefoxCacheSettings07.png" alt=""></a>6.  點選「Clear private data」可以選擇當關閉瀏覽器後要刪除哪些資料。你可以選擇清除的時間範圍和清除的項目。手動清除後一次後元件就會記住你的選擇了。<br><h9>調整快取大小上限</h9><br>無論是記憶體快取還是磁碟快取，Firefox 都提供了快取大小上限的選項。磁碟快取上限的選項可以到圖形介面的「選項」中設定，記憶體快取上限則只能透過 about:config。</li>
 </ol>
 <ul>
 <li>把以下兩個字串貼上 about:config 中搜尋，修改其值就可以改變快取上限的大小，單位為 KB（256000 = 256MB）<br><h9>記憶體快取或 RAMDISK？提升 Firefox 效能</h9><br>其實無論是記憶體快取還是 RAMDISK 都是利用記憶體來加速 Firefox 在存取快取資料時的效率，只是對原本已經切取部分記憶體來做 RAMDISK 的人來說，想要自訂快取目錄又想在關閉瀏覽器時刪除特定的隱私資料就需要借助附加元件的額外功能，Firefox 本身無法辦到這點；這也是從 Opera 轉過來的使用者比較難理解的地方。</li>
