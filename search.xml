@@ -16,7 +16,7 @@
 <li>找到你的 <code>npm</code> 指令所在位置：<code>where npm</code></li>
 <li>以管理員身分執行系統的 <code>cmd</code></li>
 <li><code>cd</code> 到 <code>git for windows</code> 路徑</li>
-<li>執行：<code>mklink /d node_modules &quot;git for windows 絕對路徑&quot;</code></li>
+<li>執行：<code>mklink /d node_modules &quot;全域 node_modules 的絕對路徑&quot;</code></li>
 </ul>
 ]]></content>
       

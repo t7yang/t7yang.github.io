@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://t7yang.github.io/"/>
-  <updated>2017-09-02T11:42:59.407Z</updated>
+  <updated>2017-09-02T11:50:20.319Z</updated>
   <id>https://t7yang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://t7yang.github.io/7653/"/>
     <id>https://t7yang.github.io/7653/</id>
     <published>2017-09-02T11:38:56.000Z</published>
-    <updated>2017-09-02T11:42:59.407Z</updated>
+    <updated>2017-09-02T11:50:20.319Z</updated>
     
     <content type="html"><![CDATA[<p>在 Windows 下安裝 <code>git</code> 的選擇通常是 <code>git for windows</code> ，無論是使用安裝版還是免安裝版的 cmder ，自帶了 bash 這個終端機介面。但經常會遇到找到指令或是 <code>npm</code> 安裝的程式無法正確執行。</p>
 <h3 id="一般指令找不到（ls）"><a href="#一般指令找不到（ls）" class="headerlink" title="一般指令找不到（ls）"></a>一般指令找不到（ls）</h3><ul>
@@ -33,7 +33,7 @@
 <li>找到你的 <code>npm</code> 指令所在位置：<code>where npm</code></li>
 <li>以管理員身分執行系統的 <code>cmd</code></li>
 <li><code>cd</code> 到 <code>git for windows</code> 路徑</li>
-<li>執行：<code>mklink /d node_modules &quot;git for windows 絕對路徑&quot;</code></li>
+<li>執行：<code>mklink /d node_modules &quot;全域 node_modules 的絕對路徑&quot;</code></li>
 </ul>
 ]]></content>
     
