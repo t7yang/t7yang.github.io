@@ -389,11 +389,11 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
+    
       <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
     
       <category term="Firefox Appearance" scheme="https://t7yang.github.io/tags/Firefox-Appearance/"/>
-    
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
   </entry>
   
@@ -484,9 +484,9 @@
     
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
-      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
-    
       <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
+    
+      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
   </entry>
   

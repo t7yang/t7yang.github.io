@@ -314,11 +314,11 @@
             
             <tag> Firefox </tag>
             
+            <tag> O2FP </tag>
+            
             <tag> Browser </tag>
             
             <tag> Firefox Appearance </tag>
-            
-            <tag> O2FP </tag>
             
         </tags>
         
@@ -397,9 +397,9 @@
             
             <tag> O2FP </tag>
             
-            <tag> Firefox Settings </tag>
-            
             <tag> Firefox Cache </tag>
+            
+            <tag> Firefox Settings </tag>
             
         </tags>
         
