@@ -16,7 +16,7 @@
 
   <!--Open Graph Title-->
   
-      <meta property="og:title" content="[程式設計] 在 Windows 正常執行 bash">
+      <meta property="og:title" content="t7&#39;Space">
   
   <!--Open Graph Description-->
   
@@ -24,7 +24,7 @@
   <meta property="og:site_name" content="t7&#39;Space">
   <!--Type page-->
   
-      <meta property="og:type" content="article">
+      <meta property="og:type" content="website">
   
   <!--Page Cover-->
   
@@ -33,7 +33,7 @@
 
   <!-- Title -->
   
-  <title>[程式設計] 在 Windows 正常執行 bash - t7&#39;Space</title>
+  <title>prettier - t7&#39;Space</title>
 
 
   <link rel="shortcut icon" href="/images/favicon.png">
@@ -121,94 +121,37 @@
 
 
   <!-- Main Content -->
-  <div class="content-area">
-  <div class="post">
-    <!-- Post Content -->
-    <div class="container">
-      <article>
-        <!-- Title date & tags -->
-        <div class="post-header">
-          <h1 class="entry-title">
-            [程式設計] 在 Windows 正常執行 bash
-            
-          </h1>
-          <p class="posted-on">
-          2017-09-02
-          </p>
-          <div class="tags-links">
-            
-              
-                <a href="/tags/Windows/" rel="tag">
-                  Windows
-                </a>
-              
-                <a href="/tags/programming/" rel="tag">
-                  programming
-                </a>
-              
-                <a href="/tags/bash/" rel="tag">
-                  bash
-                </a>
-              
-            
-          </div>
-        </div>
-        <!-- Post Main Content -->
-        <div class="entry-content">
-          <p>在 Windows 下安裝 <code>git</code> 的選擇通常是 <code>git for windows</code> ，無論使用安裝版還是免安裝版的 cmder ，都會自帶 bash 這個終端機介面。但經常會遇到找不到指令或 <code>npm</code> 安裝的程式無法正確執行。</p>
-<h3 id="一般指令找不到（ls）"><a href="#一般指令找不到（ls）" class="headerlink" title="一般指令找不到（ls）"></a>一般指令找不到（ls）</h3><ul>
-<li>在 bash 下輸入 <code>cd ~</code> 確認你的家目錄在哪（可以 <code>ls</code> 出來看看）。</li>
-<li>到家目錄新增一個 <code>.bashrc</code>。</li>
-<li>把 <code>git for windows</code> 的 <code>/usr/bin</code> 系統絕對路徑合併到 <code>$PATH</code> 。<br><code>PATH=&quot;$PATH:/c/program files/git for windows/usr/bin&quot;</code></li>
-<li>真實路徑或許會因電腦各異，請自行確認。</li>
-</ul>
-<h3 id="npm-及相關的指令找不到"><a href="#npm-及相關的指令找不到" class="headerlink" title="npm 及相關的指令找不到"></a><code>npm</code> 及相關的指令找不到</h3><ul>
-<li>找到你的 <code>npm</code> 指令所在位置：<code>where npm</code></li>
-<li>以管理員身分執行系統的 <code>cmd</code></li>
-<li><code>cd</code> 到 <code>git for windows</code> 路徑</li>
-<li>執行：<code>mklink /d node_modules &quot;全域 node_modules 的絕對路徑&quot;</code></li>
-</ul>
-
-        </div>
-      </article>
-    </div>
-    <!-- Comments -->
-    <div class="container">
-      
-<section id="comment">
-  <!-- <h1 class="title">Comments</h1> -->
-
   
-  <div id="disqus_thread">
-    <script type="text/javascript">
-    var disqus_config = function () {
-          this.page.url = window.location.href;
-          this.page.identifier = 'post-程式設計-在Windows-正常執行-bash';
-          this.page.title = '[程式設計] 在 Windows 正常執行 bash';
-      };
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!-- Main Content -->
+<div class="archive content-area">
+  <div class="container">
+    <h1 class="entry-title">#prettier</h1>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <!-- Use lodash to classify posts. See https://lodash.com/docs#groupBy -->
+        
+        
+          <h2 class="year">2017</h2>
+          <ul class="list">
+            
+  <li>
+    <span class="date">
+      2017-09-09
+    </span>
+    <a href="/20698/" class="title">
+      [程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案
+    </a>
+  </li>
+
+
+          </ul>
+        
+      </div>
+    </div>
   </div>
   
-</section>
 
-
-    </div>
-    <!-- Pre or Next -->
-    <div class="nav-links">
-      
-        <div class="nav-previous">
-          <a href="/20698/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
-        </div>
-      
-      
-        <div class="nav-next">
-          <a href="/26391/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
-        </div>
-      
-    </div>
-
-  </div>
 </div>
 
 
@@ -272,14 +215,12 @@
   var disqus_shortname = 't7space';
 
   
-  var disqus_url = 'https://t7yang.github.io/7653/';
-  
 
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

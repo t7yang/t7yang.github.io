@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://t7yang.github.io/"/>
-  <updated>2017-09-04T09:09:54.032Z</updated>
+  <updated>2017-09-09T07:50:03.685Z</updated>
   <id>https://t7yang.github.io/</id>
   
   <author>
@@ -16,11 +16,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>在 Windows 正常執行 bash</title>
+    <title>[程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案</title>
+    <link href="https://t7yang.github.io/20698/"/>
+    <id>https://t7yang.github.io/20698/</id>
+    <published>2017-09-09T07:43:05.000Z</published>
+    <updated>2017-09-09T07:50:03.685Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>排版對程式設計來說，一直是個一大問題。</p>
+</blockquote>
+<h3 id="安裝相關套件"><a href="#安裝相關套件" class="headerlink" title="安裝相關套件"></a>安裝相關套件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; yarn add eslint eslint-plugin-prettier eslint-config-prettier babel-eslint prettier -D -E</div><div class="line">&gt; npm install eslint eslint-plugin-prettier eslint-config-prettier babel-eslint prettier --save-dev --save-exact</div></pre></td></tr></table></figure>
+<h3 id="建立-eslintrc-設定檔"><a href="#建立-eslintrc-設定檔" class="headerlink" title="建立 .eslintrc 設定檔"></a>建立 <code>.eslintrc</code> 設定檔</h3><p>官方組態參考：<a href="https://eslint.org/docs/user-guide/configuring" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/configuring</a><br>awesome ESLint：<a href="https://github.com/dustinspecker/awesome-eslint" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/dustinspecker/awesome-eslint</a><br>Prettier 選項：<a href="https://github.com/prettier/prettier#options" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/prettier/prettier#options</a></p>
+<p>以下是純粹 prettier 的組態：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "extends": ["prettier"], // 套用 eslint-config-prettier 規則</div><div class="line">  "plugins": ["prettier"], // 啟動 eslint-plugin-prettier 作為自動修復錯誤</div><div class="line">  "rules": &#123;</div><div class="line">    "prettier/prettier": [ // 設定相關 prettier 規則</div><div class="line">      "warn", // 錯誤提示的部分可以改為警告，避免導致錯誤提示混雜</div><div class="line">      &#123;</div><div class="line">        "singleQuote": true, // JS 建議使用單引號</div><div class="line">        "trailingComma": "es5" // 結尾逗號建議使用 es5 合法</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以下是集合常見的 eslint 組態：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "parser": "babel-eslint", // 用 babel 解析器比較通用</div><div class="line">  "parserOptions": &#123;</div><div class="line">    "ecmaVersion": 7, // 指定使用的 ECMAScript 版本</div><div class="line">    "sourceType": "module" // 模組還是一般的 script</div><div class="line">  &#125;,</div><div class="line">  "env": &#123; // 加入內建的環境組態讓程式不會報錯</div><div class="line">    "browser": true,</div><div class="line">    "node": true,</div><div class="line">    "es6": true,</div><div class="line">    "jquery": true</div><div class="line">  &#125;,</div><div class="line">  "extends": ["prettier", "eslint:recommended"], // 加入其他規則</div><div class="line">  "plugins": ["prettier"], // 加入其他 plugin</div><div class="line">  "rules": &#123;</div><div class="line">    "prettier/prettier": [ // 設定相關 prettier 規則</div><div class="line">      "warn",</div><div class="line">      &#123;</div><div class="line">        <span class="attr">"singleQuote"</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">"trailingComma"</span>: <span class="string">"es5"</span></div><div class="line">      &#125;</div><div class="line">    ],</div><div class="line">    "eqeqeq": ["error", "alway"] // 加入其他的規則</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="新增-npm-scripts"><a href="#新增-npm-scripts" class="headerlink" title="新增 npm scripts"></a>新增 <code>npm scripts</code></h3><p>官方指令參考：<a href="https://eslint.org/docs/user-guide/command-line-interface" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/command-line-interface</a></p>
+<ul>
+<li><code>eslint</code>：執行 <code>eslint</code></li>
+<li><code>src</code>：指定目錄</li>
+<li><code>--fix</code>：自動修復可修復的錯誤或警告<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="設定-commit-前重新排版"><a href="#設定-commit-前重新排版" class="headerlink" title="設定 commit 前重新排版"></a>設定 <code>commit</code> 前重新排版</h3><p>官方在提供了三種方式，這裡則提供另一個作者覺得比較好的解決方案。</p>
+<p>安裝 <code>pre-commit</code> 套件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yarn add -D pre-commit</div></pre></td></tr></table></figure></p>
+<p>修改 <code>package.json</code> 的內容，新增後就會有這樣的效果：在 <code>commit</code> 動作之前先執行 <code>eslint</code> 和 <code>prettier</code> 的重新排版，之後透過 <code>git add --update</code> 把已經加入 <code>stage</code> 的檔案重新 <code>stage</code> 回去，最後繼續執行 <code>commit</code>。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span>,</div><div class="line">    <span class="attr">"git-update"</span>: <span class="string">"git add --udpate"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"pre-commit"</span>: [<span class="string">"eslint"</span>, <span class="string">"git-update"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>雖然比起平常執行 <code>commit</code> 的速度要慢上不少，但是這樣就可以真正的做到自動化，就算多人開發時，某些開發者沒有安裝 prettier 的編輯器套件也可以確實地在 <code>commit</code> 之前根據排版規整理過。</p>
+<h3 id="安裝編輯器套件"><a href="#安裝編輯器套件" class="headerlink" title="安裝編輯器套件"></a>安裝編輯器套件</h3><ul>
+<li>atom: <a href="https://atom.io/packages/linter-eslint" rel="external nofollow noopener noreferrer" target="_blank">linter-eslint</a></li>
+<li>Visual Studio Code: <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" rel="external nofollow noopener noreferrer" target="_blank">ESLint</a></li>
+</ul>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a href="https://medium.com/@netczuk/your-last-eslint-config-9e35bace2f99" rel="external nofollow noopener noreferrer" target="_blank">Your last ESLint config</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;排版對程式設計來說，一直是個一大問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;安裝相關套件&quot;&gt;&lt;a href=&quot;#安裝相關套件&quot; class=&quot;headerlink&quot; title=&quot;安裝相關套件&quot;&gt;&lt;/a&gt;安裝相關套件&lt;/h3&gt;&lt;fi
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://t7yang.github.io/tags/programming/"/>
+    
+      <category term="prettier" scheme="https://t7yang.github.io/tags/prettier/"/>
+    
+      <category term="eslint" scheme="https://t7yang.github.io/tags/eslint/"/>
+    
+      <category term="git" scheme="https://t7yang.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[程式設計] 在 Windows 正常執行 bash</title>
     <link href="https://t7yang.github.io/7653/"/>
     <id>https://t7yang.github.io/7653/</id>
     <published>2017-09-02T11:38:56.000Z</published>
-    <updated>2017-09-04T09:09:54.032Z</updated>
+    <updated>2017-09-09T07:46:04.915Z</updated>
     
     <content type="html"><![CDATA[<p>在 Windows 下安裝 <code>git</code> 的選擇通常是 <code>git for windows</code> ，無論使用安裝版還是免安裝版的 cmder ，都會自帶 bash 這個終端機介面。但經常會遇到找不到指令或 <code>npm</code> 安裝的程式無法正確執行。</p>
 <h3 id="一般指令找不到（ls）"><a href="#一般指令找不到（ls）" class="headerlink" title="一般指令找不到（ls）"></a>一般指令找不到（ls）</h3><ul>
@@ -45,6 +100,8 @@
     
     
       <category term="Windows" scheme="https://t7yang.github.io/tags/Windows/"/>
+    
+      <category term="programming" scheme="https://t7yang.github.io/tags/programming/"/>
     
       <category term="bash" scheme="https://t7yang.github.io/tags/bash/"/>
     
@@ -558,9 +615,9 @@
     
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
-      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
-    
       <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
+    
+      <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
     
   </entry>
   
@@ -925,30 +982,6 @@
       <category term="Mac" scheme="https://t7yang.github.io/tags/Mac/"/>
     
       <category term="TechTalk" scheme="https://t7yang.github.io/tags/TechTalk/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[創作] 我的第一本書</title>
-    <link href="https://t7yang.github.io/30915/"/>
-    <id>https://t7yang.github.io/30915/</id>
-    <published>2011-08-25T08:38:00.000Z</published>
-    <updated>2017-09-02T10:45:29.523Z</updated>
-    
-    <content type="html"><![CDATA[<p>經過長時間的努力後，我生平的第一本書已經出版了。目前已經可以在網路和實體商店中購得。這次的經驗可以說相當特別，同時也要感謝另外兩位作者的合作和出版社的用心。<br><a name="more"></a><br>這本書的書名是「Google Apps：專為企業打造的雲端全能方案」，內容分為兩個部分。前半部簡單的對雲端運算做了一個系統化的介紹，後半部則是針對 Google Apps 管理員控制台的選項設定教學，當然少不了是針對每個服務做一些設定上介紹。這本書雖然說的是目前很夯的雲端運算，但並非著墨在技術討論的部分。文中簡單的文字敘述和插圖，主要的用意就是讓讀者可以輕鬆的了解雲端運算的來龍去脈。</p>
-<p><a href="http://dl.dropbox.com/u/99508/t7Space/Photos/MyFirstBookGoogleApps.jpg" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://dl.dropbox.com/u/99508/t7Space/Photos/MyFirstBookGoogleApps.jpg" alt=""></a><br>↑<a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010516726" rel="external nofollow noopener noreferrer" target="_blank">到博客來購書！</a></p>
-<p>生平的第一本書，印象總是特別深刻。說起為何會有這次寫作的機會，主要還得感謝<a href="http://mycameo.com/cameoWeb/index.html" rel="external nofollow noopener noreferrer" target="_blank">卡米爾公司</a>提供這個機會給我。整本書從規劃到完成其實歷時相當久（將近一年的時間），而我也包辦的書中多數的架構、內容甚至是插圖的設計。整個寫作的過程中，讓我有相當多的收穫。在期待這本書有不錯銷量的同時，也希望他可以幫助到想要了解雲端和 Google Apps 的讀者。如果你對這本書感興趣的話，千萬不要錯過喔！</p>
-<p>圖片來源：<a href="http://www.delightpress.com.tw/book.aspx?book_id=SKNN00003" rel="external nofollow noopener noreferrer" target="_blank">悅知文化</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;經過長時間的努力後，我生平的第一本書已經出版了。目前已經可以在網路和實體商店中購得。這次的經驗可以說相當特別，同時也要感謝另外兩位作者的合作和出版社的用心。&lt;br&gt;&lt;a name=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;這本書的書名是「Google Apps：專為企業打造的雲端全能方
-    
-    </summary>
-    
-    
-      <category term="t7創作" scheme="https://t7yang.github.io/tags/t7%E5%89%B5%E4%BD%9C/"/>
     
   </entry>
   

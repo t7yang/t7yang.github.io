@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="t7yang">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="[程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案">
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="t7&#39;Space">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>[程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案 - t7&#39;Space</title>
+
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="/images/logo.png" alt="t7'Space" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about">
+                
+                  about
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/atom.xml">
+                
+                  rss
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            [程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案
+            
+          </h1>
+          <p class="posted-on">
+          2017-09-09
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/programming/" rel="tag">
+                  programming
+                </a>
+              
+                <a href="/tags/prettier/" rel="tag">
+                  prettier
+                </a>
+              
+                <a href="/tags/eslint/" rel="tag">
+                  eslint
+                </a>
+              
+                <a href="/tags/git/" rel="tag">
+                  git
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <blockquote>
+<p>排版對程式設計來說，一直是個一大問題。</p>
+</blockquote>
+<h3 id="安裝相關套件"><a href="#安裝相關套件" class="headerlink" title="安裝相關套件"></a>安裝相關套件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; yarn add eslint eslint-plugin-prettier eslint-config-prettier babel-eslint prettier -D -E</div><div class="line">&gt; npm install eslint eslint-plugin-prettier eslint-config-prettier babel-eslint prettier --save-dev --save-exact</div></pre></td></tr></table></figure>
+<h3 id="建立-eslintrc-設定檔"><a href="#建立-eslintrc-設定檔" class="headerlink" title="建立 .eslintrc 設定檔"></a>建立 <code>.eslintrc</code> 設定檔</h3><p>官方組態參考：<a href="https://eslint.org/docs/user-guide/configuring" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/configuring</a><br>awesome ESLint：<a href="https://github.com/dustinspecker/awesome-eslint" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/dustinspecker/awesome-eslint</a><br>Prettier 選項：<a href="https://github.com/prettier/prettier#options" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/prettier/prettier#options</a></p>
+<p>以下是純粹 prettier 的組態：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "extends": ["prettier"], // 套用 eslint-config-prettier 規則</div><div class="line">  "plugins": ["prettier"], // 啟動 eslint-plugin-prettier 作為自動修復錯誤</div><div class="line">  "rules": &#123;</div><div class="line">    "prettier/prettier": [ // 設定相關 prettier 規則</div><div class="line">      "warn", // 錯誤提示的部分可以改為警告，避免導致錯誤提示混雜</div><div class="line">      &#123;</div><div class="line">        "singleQuote": true, // JS 建議使用單引號</div><div class="line">        "trailingComma": "es5" // 結尾逗號建議使用 es5 合法</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以下是集合常見的 eslint 組態：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "parser": "babel-eslint", // 用 babel 解析器比較通用</div><div class="line">  "parserOptions": &#123;</div><div class="line">    "ecmaVersion": 7, // 指定使用的 ECMAScript 版本</div><div class="line">    "sourceType": "module" // 模組還是一般的 script</div><div class="line">  &#125;,</div><div class="line">  "env": &#123; // 加入內建的環境組態讓程式不會報錯</div><div class="line">    "browser": true,</div><div class="line">    "node": true,</div><div class="line">    "es6": true,</div><div class="line">    "jquery": true</div><div class="line">  &#125;,</div><div class="line">  "extends": ["prettier", "eslint:recommended"], // 加入其他規則</div><div class="line">  "plugins": ["prettier"], // 加入其他 plugin</div><div class="line">  "rules": &#123;</div><div class="line">    "prettier/prettier": [ // 設定相關 prettier 規則</div><div class="line">      "warn",</div><div class="line">      &#123;</div><div class="line">        <span class="attr">"singleQuote"</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">"trailingComma"</span>: <span class="string">"es5"</span></div><div class="line">      &#125;</div><div class="line">    ],</div><div class="line">    "eqeqeq": ["error", "alway"] // 加入其他的規則</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="新增-npm-scripts"><a href="#新增-npm-scripts" class="headerlink" title="新增 npm scripts"></a>新增 <code>npm scripts</code></h3><p>官方指令參考：<a href="https://eslint.org/docs/user-guide/command-line-interface" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/command-line-interface</a></p>
+<ul>
+<li><code>eslint</code>：執行 <code>eslint</code></li>
+<li><code>src</code>：指定目錄</li>
+<li><code>--fix</code>：自動修復可修復的錯誤或警告<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="設定-commit-前重新排版"><a href="#設定-commit-前重新排版" class="headerlink" title="設定 commit 前重新排版"></a>設定 <code>commit</code> 前重新排版</h3><p>官方在提供了三種方式，這裡則提供另一個作者覺得比較好的解決方案。</p>
+<p>安裝 <code>pre-commit</code> 套件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yarn add -D pre-commit</div></pre></td></tr></table></figure></p>
+<p>修改 <code>package.json</code> 的內容，新增後就會有這樣的效果：在 <code>commit</code> 動作之前先執行 <code>eslint</code> 和 <code>prettier</code> 的重新排版，之後透過 <code>git add --update</code> 把已經加入 <code>stage</code> 的檔案重新 <code>stage</code> 回去，最後繼續執行 <code>commit</code>。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span>,</div><div class="line">    <span class="attr">"git-update"</span>: <span class="string">"git add --udpate"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"pre-commit"</span>: [<span class="string">"eslint"</span>, <span class="string">"git-update"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>雖然比起平常執行 <code>commit</code> 的速度要慢上不少，但是這樣就可以真正的做到自動化，就算多人開發時，某些開發者沒有安裝 prettier 的編輯器套件也可以確實地在 <code>commit</code> 之前根據排版規整理過。</p>
+<h3 id="安裝編輯器套件"><a href="#安裝編輯器套件" class="headerlink" title="安裝編輯器套件"></a>安裝編輯器套件</h3><ul>
+<li>atom: <a href="https://atom.io/packages/linter-eslint" rel="external nofollow noopener noreferrer" target="_blank">linter-eslint</a></li>
+<li>Visual Studio Code: <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" rel="external nofollow noopener noreferrer" target="_blank">ESLint</a></li>
+</ul>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a href="https://medium.com/@netczuk/your-last-eslint-config-9e35bace2f99" rel="external nofollow noopener noreferrer" target="_blank">Your last ESLint config</a></li>
+</ul>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-程式設計-如何快速建立使用-Prettier-ESLint-自動排版程式碼專案';
+          this.page.title = '[程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+      
+        <div class="nav-next">
+          <a href="/7653/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">About</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li>t7yang</li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/t7yang" class="icon icon-github" target="_blank" rel="external nofollow noopener noreferrer">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>t7'Space &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank" rel="external nofollow noopener noreferrer">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 't7space';
+
+  
+  var disqus_url = 'https://t7yang.github.io/20698/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+</body>
+
+</html>
