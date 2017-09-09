@@ -21,8 +21,9 @@
 </ul>
 <h3 id="設定-commit-前重新排版"><a href="#設定-commit-前重新排版" class="headerlink" title="設定 commit 前重新排版"></a>設定 <code>commit</code> 前重新排版</h3><p>官方在提供了三種方式，這裡則提供另一個作者覺得比較好的解決方案。</p>
 <p>安裝 <code>pre-commit</code> 套件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yarn add -D pre-commit</div></pre></td></tr></table></figure></p>
-<p>修改 <code>package.json</code> 的內容，新增後就會有這樣的效果：在 <code>commit</code> 動作之前先執行 <code>eslint</code> 和 <code>prettier</code> 的重新排版，之後透過 <code>git add --update</code> 把已經加入 <code>stage</code> 的檔案重新 <code>stage</code> 回去，最後繼續執行 <code>commit</code>。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span>,</div><div class="line">    <span class="attr">"git-update"</span>: <span class="string">"git add --udpate"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"pre-commit"</span>: [<span class="string">"eslint"</span>, <span class="string">"git-update"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>修改 <code>package.json</code> 的內容，新增後就會有這樣的效果：在 <code>commit</code> 動作之前先執行 <code>store-add</code> 把當前已 <code>add</code> 的檔案暫存在 <code>gittoadd</code> ，接著繼續執行 <code>eslint</code> 和 <code>prettier</code> 重新排版，之後透過 <code>git update</code> 把暫存在 <code>gittoadd</code> 的檔案清單重新 <code>add</code> 回去，最後繼續執行 <code>commit</code>。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span>,</div><div class="line">    <span class="attr">"store-add"</span>: <span class="string">"git diff --name-only --cached &gt; gittoadd"</span>,</div><div class="line">    <span class="attr">"git-update"</span>: <span class="string">"cat ./gittoadd | xargs git add"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"pre-commit"</span>: [<span class="string">"store-add"</span>, <span class="string">"eslint"</span>, <span class="string">"git-update"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最後記得把 <code>gittoadd</code> 這個暫存用檔案加入 <code>.gitignore</code> 中，避免被 <code>git</code> 監視。</p>
 <p>雖然比起平常執行 <code>commit</code> 的速度要慢上不少，但是這樣就可以真正的做到自動化，就算多人開發時，某些開發者沒有安裝 prettier 的編輯器套件也可以確實地在 <code>commit</code> 之前根據排版規整理過。</p>
 <h3 id="安裝編輯器套件"><a href="#安裝編輯器套件" class="headerlink" title="安裝編輯器套件"></a>安裝編輯器套件</h3><ul>
 <li>atom: <a href="https://atom.io/packages/linter-eslint" rel="external nofollow noopener noreferrer" target="_blank">linter-eslint</a></li>
@@ -510,9 +511,9 @@
             
             <tag> O2FP </tag>
             
-            <tag> Firefox Cache </tag>
-            
             <tag> Firefox Settings </tag>
+            
+            <tag> Firefox Cache </tag>
             
         </tags>
         
