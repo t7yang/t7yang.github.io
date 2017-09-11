@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://t7yang.github.io/"/>
-  <updated>2017-09-09T11:47:19.052Z</updated>
+  <updated>2017-09-11T03:02:12.383Z</updated>
   <id>https://t7yang.github.io/</id>
   
   <author>
@@ -20,13 +20,17 @@
     <link href="https://t7yang.github.io/20698/"/>
     <id>https://t7yang.github.io/20698/</id>
     <published>2017-09-09T11:22:05.000Z</published>
-    <updated>2017-09-09T11:47:19.052Z</updated>
+    <updated>2017-09-11T03:02:12.383Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>排版對程式設計來說，一直是個一大問題。</p>
 </blockquote>
 <h3 id="安裝相關套件"><a href="#安裝相關套件" class="headerlink" title="安裝相關套件"></a>安裝相關套件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; yarn add eslint eslint-plugin-prettier eslint-config-prettier babel-eslint prettier -D -E</div><div class="line">&gt; npm install eslint eslint-plugin-prettier eslint-config-prettier babel-eslint prettier --save-dev --save-exact</div></pre></td></tr></table></figure>
-<h3 id="建立-eslintrc-設定檔"><a href="#建立-eslintrc-設定檔" class="headerlink" title="建立 .eslintrc 設定檔"></a>建立 <code>.eslintrc</code> 設定檔</h3><p>官方組態參考：<a href="https://eslint.org/docs/user-guide/configuring" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/configuring</a><br>awesome ESLint：<a href="https://github.com/dustinspecker/awesome-eslint" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/dustinspecker/awesome-eslint</a><br>Prettier 選項：<a href="https://github.com/prettier/prettier#options" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/prettier/prettier#options</a></p>
+<h3 id="建立-eslintrc-設定檔"><a href="#建立-eslintrc-設定檔" class="headerlink" title="建立 .eslintrc 設定檔"></a>建立 <code>.eslintrc</code> 設定檔</h3><ul>
+<li>官方組態參考：<a href="https://eslint.org/docs/user-guide/configuring" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/configuring</a></li>
+<li>awesome ESLint：<a href="https://github.com/dustinspecker/awesome-eslint" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/dustinspecker/awesome-eslint</a></li>
+<li>Prettier 選項：<a href="https://github.com/prettier/prettier#options" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/prettier/prettier#options</a></li>
+</ul>
 <p>以下是純粹 prettier 的組態：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "extends": ["prettier"], // 套用 eslint-config-prettier 規則</div><div class="line">  "plugins": ["prettier"], // 啟動 eslint-plugin-prettier 作為自動修復錯誤</div><div class="line">  "rules": &#123;</div><div class="line">    "prettier/prettier": [ // 設定相關 prettier 規則</div><div class="line">      "warn", // 錯誤提示的部分可以改為警告，避免導致錯誤提示混雜</div><div class="line">      &#123;</div><div class="line">        "singleQuote": true, // JS 建議使用單引號</div><div class="line">        "trailingComma": "es5" // 結尾逗號建議使用 es5 合法</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>以下是集合常見的 eslint 組態：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "parser": "babel-eslint", // 用 babel 解析器比較通用</div><div class="line">  "parserOptions": &#123;</div><div class="line">    "ecmaVersion": 7, // 指定使用的 ECMAScript 版本</div><div class="line">    "sourceType": "module" // 模組還是一般的 script</div><div class="line">  &#125;,</div><div class="line">  "env": &#123; // 加入內建的環境組態讓程式不會報錯</div><div class="line">    "browser": true,</div><div class="line">    "node": true,</div><div class="line">    "es6": true,</div><div class="line">    "jquery": true</div><div class="line">  &#125;,</div><div class="line">  "extends": ["prettier", "eslint:recommended"], // 加入其他規則</div><div class="line">  "plugins": ["prettier"], // 加入其他 plugin</div><div class="line">  "rules": &#123;</div><div class="line">    "prettier/prettier": [ // 設定相關 prettier 規則</div><div class="line">      "warn",</div><div class="line">      &#123;</div><div class="line">        <span class="attr">"singleQuote"</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">"trailingComma"</span>: <span class="string">"es5"</span></div><div class="line">      &#125;</div><div class="line">    ],</div><div class="line">    "eqeqeq": ["error", "alway"] // 加入其他的規則</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="新增-npm-scripts"><a href="#新增-npm-scripts" class="headerlink" title="新增 npm scripts"></a>新增 <code>npm scripts</code></h3><p>官方指令參考：<a href="https://eslint.org/docs/user-guide/command-line-interface" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/docs/user-guide/command-line-interface</a></p>
@@ -36,6 +40,13 @@
 <li><code>--fix</code>：自動修復可修復的錯誤或警告<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint"</span>: <span class="string">"eslint src --fix"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="結合-eslint-loader-即時檢查"><a href="#結合-eslint-loader-即時檢查" class="headerlink" title="結合 eslint-loader 即時檢查"></a>結合 eslint-loader 即時檢查</h3><ul>
+<li>eslint-loader: <a href="https://github.com/MoOx/eslint-loader" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/MoOx/eslint-loader</a></li>
+</ul>
+<p>在不藉助使用者自行安裝編輯器套件的情況下，想要達到在開發者 <code>commit</code> 前做好 eslint 檢查和 prettier 排版修正，除了下面還會提到的 <code>pre-commit</code> 方法外，就是結合 eslint-loader 讓 webpack 在持續監視的情況即時套用修正。</p>
+<p>安裝 eslint-loader<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yarn add -D eslint-loader</div></pre></td></tr></table></figure></p>
+<p>設定 webpack.config.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="built_in">module</span>: &#123;</div><div class="line">    rules: [</div><div class="line">      &#123;</div><div class="line">        enforce: <span class="string">'pre'</span>, <span class="comment">// 確保 lint 的結果是最原始的檔案內容</span></div><div class="line">        test: <span class="regexp">/\.js$/</span>,</div><div class="line">        exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">        loader: <span class="string">'eslint-loader'</span>,</div><div class="line">        options: &#123;</div><div class="line">          fix: <span class="literal">true</span>, <span class="comment">// 自動修正可修正的項目</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>其他選項請參考 eslint-loader 網站說明。</p>
 <h3 id="設定-commit-前重新排版"><a href="#設定-commit-前重新排版" class="headerlink" title="設定 commit 前重新排版"></a>設定 <code>commit</code> 前重新排版</h3><p>官方在提供了三種方式，這裡則提供另一個作者覺得比較好的解決方案。</p>
 <p>安裝 <code>pre-commit</code> 套件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yarn add -D pre-commit</div></pre></td></tr></table></figure></p>
 <p>修改 <code>package.json</code> 的內容，新增後就會有這樣的效果：在 <code>commit</code> 動作之前先執行 <code>store-add</code> 把當前已 <code>add</code> 的檔案暫存在 <code>gittoadd</code> ，接著繼續執行 <code>eslint</code> 和 <code>prettier</code> 重新排版，之後透過 <code>git update</code> 把暫存在 <code>gittoadd</code> 的檔案清單重新 <code>add</code> 回去，最後繼續執行 <code>commit</code>。</p>
@@ -322,9 +333,9 @@
     </summary>
     
     
-      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
-    
       <category term="Firefox Font Settings" scheme="https://t7yang.github.io/tags/Firefox-Font-Settings/"/>
+    
+      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
     
   </entry>
   
@@ -392,9 +403,9 @@
     </summary>
     
     
-      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
-    
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
+    
+      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
     
       <category term="Addons" scheme="https://t7yang.github.io/tags/Addons/"/>
     
@@ -514,13 +525,13 @@
     </summary>
     
     
-      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
-    
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="Firefox Appearance" scheme="https://t7yang.github.io/tags/Firefox-Appearance/"/>
-    
       <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
+    
+      <category term="Browser" scheme="https://t7yang.github.io/tags/Browser/"/>
+    
+      <category term="Firefox Appearance" scheme="https://t7yang.github.io/tags/Firefox-Appearance/"/>
     
   </entry>
   
@@ -614,9 +625,9 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
-    
       <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
+    
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
       <category term="Firefox Cache" scheme="https://t7yang.github.io/tags/Firefox-Cache/"/>
     
@@ -723,11 +734,11 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
-    
       <category term="Firefox Font Settings" scheme="https://t7yang.github.io/tags/Firefox-Font-Settings/"/>
     
       <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
+    
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
       <category term="UserStyle" scheme="https://t7yang.github.io/tags/UserStyle/"/>
     
@@ -756,9 +767,9 @@
     
       <category term="Firefox" scheme="https://t7yang.github.io/tags/Firefox/"/>
     
-      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
-    
       <category term="Firefox Settings" scheme="https://t7yang.github.io/tags/Firefox-Settings/"/>
+    
+      <category term="O2FP" scheme="https://t7yang.github.io/tags/O2FP/"/>
     
   </entry>
   
