@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[[程式設計] 為什麼你應該用 debugger 而不是 console.log]]></title>
+      <url>/46853/</url>
+      <content type="html"><![CDATA[<p>開發 JavaScript 專案時，很常使用<code>console.log</code>作為除錯的主要方式，但是使用<code>debugger</code>可以帶來更好的效果。</p>
+<h3 id="不會忘了"><a href="#不會忘了" class="headerlink" title="不會忘了"></a>不會忘了</h3><p>不可否認的是<code>console.log</code>確實是一個非常方便的除錯工具，但是多數開發者應該都有這樣的經驗——在除錯結束後，忘了把<code>console.log</code>給刪除，然後就開始<code>commit</code>了，程式碼自然也跟著進入<code>git</code>伺服器。</p>
+<p>但是<code>debugger</code>比較沒有這樣的問題，因為它會讓瀏覽器在執行到<code>debugger</code>時立即暫停，這樣的情況的是非常明顯的，讓開發者比較不容易忘了在除錯後把它移除。</p>
+<h3 id="少打字-瀏覽器除錯器"><a href="#少打字-瀏覽器除錯器" class="headerlink" title="少打字 瀏覽器除錯器"></a>少打字 瀏覽器除錯器</h3><p><code>&#39;debugger&#39;.length &lt; &#39;console.log()&#39;.length === true</code>只是一個最表象的好處。它更深層的意義在於瀏覽器除錯工具的強大，讓開發者可以減少很多除錯時間。大家應該都有類似的經驗——一開始以為問題出在變數<code>a</code>，印出來後發現不是，繼續變換若干個變數後，最後才找到出狀況的變數。</p>
+<p>但是<code>debugger</code>的暫停效果配合瀏覽器除錯工具可以讓開發者直接檢視當下不同變數的狀態。開發者可以快速的在不同變數資料來回檢視。不需要重新再使用<code>console.log</code>印出不同的變數。</p>
+<h3 id="時間暫停器"><a href="#時間暫停器" class="headerlink" title="時間暫停器"></a>時間暫停器</h3><p><code>debugger</code>就像是男人夢寐以求的「時間暫停器」，只要你下了<code>debugger</code>，瀏覽器執行到這裡時就會無條件的暫停，同時把當下的狀態也會保留下來。除此之外，你還可以透過瀏覽器除錯工具所提供的那些強大功能來檢視目前專案程式碼執行的狀態，通常面板內會有三大區塊，分別是「來源區」——可以看到原始碼、「程式碼內容區」——就像是一個編輯器，在這裡透過滑鼠懸浮在變數上就可以看到它的狀態、「工具區」——有很多工具可以用來追蹤和檢視專案程式碼。（<a href="https://mozilladevelopers.github.io/playground/debugger" rel="external nofollow noopener noreferrer" target="_blank">Introduction to Firefox Debugger</a>）</p>
+<h3 id="無限迴圈"><a href="#無限迴圈" class="headerlink" title="無限迴圈"></a>無限迴圈</h3><p>偶爾或許會寫出一些無窮迴圈的狀況吧？這時看到瀏覽器分頁整個當住，記憶體不斷飆高，該怎麼辦好？果斷下<code>debugger</code>吧！除錯工具會立即停止，同時讓開發者以多種步進的方式來執行程式碼，這樣可以更快的抓到肇因。</p>
+<p>如果你還沒習慣，沒關係，現在開始就嘗試使用<code>debugger</code>作為除錯時的主要方式吧。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> programming </tag>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[[程式設計] 如何快速建立使用 Prettier + ESLint 自動排版程式碼專案]]></title>
       <url>/20698/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -520,11 +544,11 @@
             
             <tag> Firefox </tag>
             
-            <tag> Firefox Settings </tag>
-            
             <tag> O2FP </tag>
             
             <tag> Firefox Cache </tag>
+            
+            <tag> Firefox Settings </tag>
             
         </tags>
         
@@ -615,11 +639,11 @@
             
             <tag> Firefox </tag>
             
-            <tag> Firefox Font Settings </tag>
+            <tag> O2FP </tag>
             
             <tag> Firefox Settings </tag>
             
-            <tag> O2FP </tag>
+            <tag> Firefox Font Settings </tag>
             
             <tag> UserStyle </tag>
             
@@ -642,9 +666,9 @@
             
             <tag> Firefox </tag>
             
-            <tag> Firefox Settings </tag>
-            
             <tag> O2FP </tag>
+            
+            <tag> Firefox Settings </tag>
             
         </tags>
         
@@ -957,11 +981,11 @@
         
         <tags>
             
-            <tag> Browser </tag>
-            
             <tag> Opera </tag>
             
             <tag> Opera News </tag>
+            
+            <tag> Browser </tag>
             
             <tag> Article/Translation </tag>
             
@@ -983,9 +1007,9 @@
         
         <tags>
             
-            <tag> Browser </tag>
-            
             <tag> Opera </tag>
+            
+            <tag> Browser </tag>
             
             <tag> Opera With t7 </tag>
             
@@ -1226,9 +1250,9 @@
         
         <tags>
             
-            <tag> Browser </tag>
-            
             <tag> Opera </tag>
+            
+            <tag> Browser </tag>
             
             <tag> Opera Font </tag>
             
